@@ -1,12 +1,14 @@
 package com.lfdel24.api.example.repository;
 
-import com.lfdel24.api.example.model.Product;
+import com.lfdel24.api.example.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author leo
  */
-public abstract class PersonRepository implements JpaRepository<Product, Long>{
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long>{
     
 }

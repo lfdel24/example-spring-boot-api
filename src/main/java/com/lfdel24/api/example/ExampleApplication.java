@@ -8,10 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ExampleApplication {
-
+    
+//    TODO: Averiguar la mejor forma de crear las url de una api     
+    
     public static void main(String[] args) {
         SpringApplication.run(ExampleApplication.class, args);
-        openChromeLinux();
+//        openChromeLinux();
     }
 
     private static void openChromeLinux() {

@@ -1,6 +1,6 @@
-package com.lfdel24.api.example.model;
+package com.lfdel24.api.example.entity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +12,7 @@ import javax.persistence.Table;
  * @author leo
  */
 @Entity
-@Table(name = "persons")
-
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -22,23 +21,17 @@ public class Product {
 
     private String name;
     private String detail;
-    private String price;
-    private long stock;
+    private double price;
+    private Integer stock;
     private String createdAt;
 
     public Product() {
-    }
-
-    public Product(String name, String detail, String price, long stock, String createdAt) {
-        this.name = name;
-        this.detail = detail;
-        this.price = price;
-        this.stock = stock;
-        this.createdAt = createdAt;
-    }
-
-    public Long getId() {
-        return id;
+        this.id = 0L;
+        this.name = "";
+        this.detail = "";
+        this.price = 0;
+        this.stock = 0;
+        this.createdAt = LocalDate.now().toString();
     }
 
     public String getName() {
@@ -57,19 +50,19 @@ public class Product {
         this.detail = detail;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public long getStock() {
+    public Integer getStock() {
         return stock;
     }
 
-    public void setStock(long stock) {
+    public void setStock(Integer stock) {
         this.stock = stock;
     }
 
@@ -80,5 +73,7 @@ public class Product {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
-
+    
+    
+    
 }
